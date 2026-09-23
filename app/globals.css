@@ -1,0 +1,170 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --sky: #0a6ce0;
+  --logo-blue: #1f5fe0;
+  --yellow: #ffc400;
+  --green: #2ea83c;
+  --red: #e3262b;
+  --grass: #5bc236;
+  --dirt: #e7a33c;
+  --coin: #f5c518;
+  --ink: #1a1a1a;
+  --hill: #3fb8b0;
+}
+
+html,
+body {
+  background: var(--sky);
+  color: #fff;
+  overflow-x: hidden;
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  font-family: var(--font-body), system-ui, sans-serif;
+}
+
+:focus-visible {
+  outline: 3px solid var(--yellow);
+  outline-offset: 3px;
+  border-radius: 6px;
+}
+
+@layer components {
+  /* Letras del título: color por letra, contorno grueso y extrusión 3D */
+  .mario-title {
+    font-family: var(--font-display), system-ui, sans-serif;
+    line-height: 0.95;
+    letter-spacing: 0.01em;
+    text-transform: uppercase;
+  }
+  .mario-title .l {
+    display: inline-block;
+    -webkit-text-stroke: 0.14em var(--ink);
+    paint-order: stroke fill;
+    text-shadow:
+      0 0.05em 0 var(--ink),
+      0 0.09em 0 var(--ink),
+      0 0.13em 0 var(--ink),
+      0 0.16em 0.06em rgba(0, 0, 0, 0.35);
+  }
+
+  .sky-text {
+    text-shadow: 0 2px 0 rgba(0, 0, 0, 0.35), 0 0 12px rgba(0, 0, 0, 0.18);
+  }
+
+  /* Panel ejecutivo: blanco, borde tinta y sombra dura */
+  .panel {
+    background: #fff;
+    color: var(--ink);
+    border: 3px solid var(--ink);
+    border-radius: 18px;
+    box-shadow: 0 6px 0 var(--ink);
+  }
+
+  .btn-primary {
+    @apply inline-flex min-h-[52px] items-center justify-center gap-2 rounded-2xl px-6 text-lg font-extrabold;
+    font-family: var(--font-display), system-ui, sans-serif;
+    letter-spacing: 0.02em;
+    color: var(--ink);
+    background: linear-gradient(180deg, #ffd84a 0%, var(--yellow) 55%, #f0a800 100%);
+    border: 3px solid var(--ink);
+    box-shadow: 0 5px 0 var(--ink);
+    transition: transform 0.08s ease, box-shadow 0.08s ease;
+  }
+  .btn-primary:active {
+    transform: translateY(4px);
+    box-shadow: 0 1px 0 var(--ink);
+  }
+  .btn-primary:disabled {
+    opacity: 0.6;
+  }
+
+  .btn-ghost {
+    @apply inline-flex min-h-[44px] items-center justify-center gap-2 rounded-xl px-4 font-bold;
+    color: #fff;
+    background: rgba(0, 0, 0, 0.18);
+    border: 2px solid rgba(255, 255, 255, 0.55);
+  }
+
+  /* Bloque "?" */
+  .qblock {
+    position: relative;
+    display: grid;
+    place-items: center;
+    width: 52px;
+    height: 52px;
+    flex: none;
+    border: 3px solid var(--ink);
+    border-radius: 8px;
+    background: linear-gradient(180deg, #ffd84a 0%, var(--yellow) 50%, #eea300 100%);
+    box-shadow: inset 0 -5px 0 rgba(0, 0, 0, 0.18), inset 0 4px 0 rgba(255, 255, 255, 0.45);
+    font-family: var(--font-display), system-ui, sans-serif;
+    font-size: 30px;
+    color: #fff;
+    -webkit-text-stroke: 5px var(--ink);
+    paint-order: stroke fill;
+  }
+  .qblock::before,
+  .qblock::after {
+    content: '';
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    border-radius: 1px;
+    background: #9a5a00;
+  }
+  .qblock::before {
+    top: 5px;
+    left: 5px;
+    box-shadow: 34px 0 0 #9a5a00;
+  }
+  .qblock::after {
+    bottom: 5px;
+    left: 5px;
+    box-shadow: 34px 0 0 #9a5a00;
+  }
+  .qblock.used {
+    background: linear-gradient(180deg, #d69a55 0%, #b8752e 100%);
+    color: var(--yellow);
+  }
+
+  /* Moneda CSS */
+  .coin {
+    display: inline-block;
+    border-radius: 50%;
+    background: radial-gradient(circle at 35% 30%, #fff6b0 0%, var(--coin) 38%, #d99a00 100%);
+    border: 2px solid #8a5a00;
+    box-shadow: inset 0 0 0 3px rgba(255, 255, 255, 0.35);
+    position: relative;
+  }
+  .coin::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 22%;
+    width: 18%;
+    height: 56%;
+    transform: translateX(-50%);
+    border-radius: 3px;
+    background: linear-gradient(180deg, #ffe680, #c98a00);
+    border: 1px solid #8a5a00;
+  }
+
+  .pixel {
+    font-family: var(--font-pixel), monospace;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
