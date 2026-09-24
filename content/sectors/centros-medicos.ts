@@ -37,7 +37,7 @@ export const centrosMedicos: Sector = {
   firstChallenge: {
     luigi: '¿Qué dice nuestro protocolo de [procedimiento]?',
     peach: 'Crea el manual de bienvenida del nuevo médico',
-    yoshi: 'Analiza el ausentismo por día en Excel',
+    bowser: 'Analiza el ausentismo por día en Excel',
     toad: 'Agente de preguntas frecuentes para pacientes',
     mario: 'Piloto en recepción + gerencia',
   },

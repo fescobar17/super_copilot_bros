@@ -37,7 +37,7 @@ export const brokers: Sector = {
   firstChallenge: {
     luigi: 'Compara estas 2 pólizas y dame las diferencias',
     peach: 'Redacta la propuesta de renovación para [cliente]',
-    yoshi: 'Analiza mi cartera: ¿quién tiene más riesgo de no renovar?',
+    bowser: 'Analiza mi cartera: ¿quién tiene más riesgo de no renovar?',
     toad: 'Automatiza el recordatorio de vencimientos',
     mario: 'Piloto de Copilot para todo el equipo comercial',
   },

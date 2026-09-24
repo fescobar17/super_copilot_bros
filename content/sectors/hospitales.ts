@@ -37,7 +37,7 @@ export const hospitales: Sector = {
   firstChallenge: {
     luigi: 'Pídele a Copilot: resume todo lo que tenemos sobre [protocolo X]',
     peach: 'Redacta el comunicado de cambio de turno en 30 segundos',
-    yoshi: 'Sube el Excel de ocupación y pregunta: ¿qué patrón ves?',
+    bowser: 'Sube el Excel de ocupación y pregunta: ¿qué patrón ves?',
     toad: 'Crea un agente que responda las preguntas frecuentes del personal',
     mario: 'Lleva un piloto de Copilot a un área completa',
   },

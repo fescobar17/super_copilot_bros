@@ -37,7 +37,7 @@ export const laboratorios: Sector = {
   firstChallenge: {
     luigi: '¿Cuál es la versión vigente del POE de [prueba]?',
     peach: 'Redacta la guía de preparación del paciente para 5 exámenes',
-    yoshi: 'Analiza el QC del mes en Excel',
+    bowser: 'Analiza el QC del mes en Excel',
     toad: 'Agente que responda consultas de estado de resultados',
     mario: 'Piloto en recepción y atención al médico',
   },

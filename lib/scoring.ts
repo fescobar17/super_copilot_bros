@@ -19,7 +19,7 @@ export function countLetters(answers: readonly Letter[]): LetterCounts {
 /**
  * Regla de asignación:
  * 1. Cuenta respuestas por letra.
- * 2. Una sola letra con el máximo → su personaje (A Luigi · B Peach · C Yoshi · D Toad).
+ * 2. Una sola letra con el máximo → su personaje (A Luigi · B Peach · C Bowser · D Toad).
  * 3. Dos o más letras empatadas en el máximo → Mario (ACELERA).
  */
 export function scoreAnswers(answers: readonly Letter[]): Result {

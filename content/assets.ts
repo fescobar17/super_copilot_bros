@@ -3,11 +3,11 @@
 // Para reemplazar una ilustración, cambia solo la URL aquí.
 export const ASSETS: Record<string, string | null> = {
   // Personajes (PNG con fondo transparente)
-  luigi: null, // TODO: URL de Cloudinary
-  peach: null, // TODO: URL de Cloudinary
-  yoshi: null, // TODO: URL de Cloudinary
-  toad: null, // TODO: URL de Cloudinary
-  mario: null, // TODO: URL de Cloudinary
+  luigi: 'https://res.cloudinary.com/dwcqgcl0m/image/upload/v1790278614/Luigi_eoi57v.png',
+  peach: 'https://res.cloudinary.com/dwcqgcl0m/image/upload/v1790278606/peach_yd53b8.png',
+  bowser: 'https://res.cloudinary.com/dwcqgcl0m/image/upload/v1790278618/Bowser_kw0wv0.png',
+  toad: 'https://res.cloudinary.com/dwcqgcl0m/image/upload/v1790278603/Tod_ylf9a2.png',
+  mario: 'https://res.cloudinary.com/dwcqgcl0m/image/upload/v1790278608/Mario_uzcjfx.png',
 
   // Marca
   logoEvento: null, // TODO: logo "Super Copilot Bros" transparente

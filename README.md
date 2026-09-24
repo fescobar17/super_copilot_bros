@@ -50,7 +50,7 @@ Todo el contenido sale **literal** de `docs/dinamica.md`. Un test (`tests/conten
 
 **Editar un sector:** abre `content/sectors/<sector>.ts`, cambia el texto y corre `npm test`. Si cambias `docs/dinamica.md`, actualiza ambos para que el test siga en verde.
 
-**Regla de asignación** (`lib/scoring.ts`): gana la letra con más respuestas (A Luigi · B Peach · C Yoshi · D Toad); si dos o más empatan en el máximo → Mario (ACELERA).
+**Regla de asignación** (`lib/scoring.ts`): gana la letra con más respuestas (A Luigi · B Peach · C Bowser · D Toad); si dos o más empatan en el máximo → Mario (ACELERA).
 
 ## Ilustraciones
 

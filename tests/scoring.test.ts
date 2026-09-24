@@ -7,7 +7,7 @@ const play = (s: string) => scoreAnswers(s.split('') as Letter[]);
 describe('scoreAnswers', () => {
   it.each([
     ['AAAB', 'luigi'],
-    ['ABCC', 'yoshi'],
+    ['ABCC', 'bowser'],
     ['AABB', 'mario'],
     ['ABCD', 'mario'],
     ['DDDD', 'toad'],

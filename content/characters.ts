@@ -22,14 +22,14 @@ export const CHARACTERS: Record<CharacterKey, Character> = {
     image: 'peach',
     color: '#E8559B',
   },
-  yoshi: {
-    key: 'yoshi',
-    name: 'Yoshi',
+  bowser: {
+    key: 'bowser',
+    name: 'Bowser',
     powerUp: 'ANALIZA',
     letter: 'C',
     profile: 'Estratega: quiere entender qué dicen los datos antes que nadie.',
     phrase: 'Tu superpoder: ver el patrón antes de que llegue el Excel.',
-    image: 'yoshi',
+    image: 'bowser',
     color: '#7CC242',
   },
   toad: {
@@ -57,7 +57,7 @@ export const CHARACTERS: Record<CharacterKey, Character> = {
 export const CHARACTER_BY_LETTER: Record<Letter, CharacterKey> = {
   A: 'luigi',
   B: 'peach',
-  C: 'yoshi',
+  C: 'bowser',
   D: 'toad',
 };
 

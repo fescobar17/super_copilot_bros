@@ -5,11 +5,11 @@ describe('normalizeBoard', () => {
   it('convierte nombres visibles a claves internas', () => {
     const board = normalizeBoard({
       ok: true,
-      counts: { Aseguradoras: { Toad: 3, Luigi: 1 }, 'Laboratorios clínicos': { Yoshi: 2 } },
+      counts: { Aseguradoras: { Toad: 3, Luigi: 1 }, 'Laboratorios clínicos': { Bowser: 2 } },
     });
     expect(board.aseguradoras.toad).toBe(3);
     expect(board.aseguradoras.luigi).toBe(1);
-    expect(board.laboratorios.yoshi).toBe(2);
+    expect(board.laboratorios.bowser).toBe(2);
     expect(board.hospitales.mario).toBe(0);
   });
 
@@ -21,8 +21,8 @@ describe('normalizeBoard', () => {
 
 describe('leaders', () => {
   it('devuelve el personaje dominante o el empate', () => {
-    expect(leaders({ luigi: 1, peach: 0, yoshi: 0, toad: 3, mario: 0 })).toEqual(['toad']);
-    expect(leaders({ luigi: 2, peach: 2, yoshi: 0, toad: 0, mario: 0 })).toEqual(['luigi', 'peach']);
-    expect(leaders({ luigi: 0, peach: 0, yoshi: 0, toad: 0, mario: 0 })).toEqual([]);
+    expect(leaders({ luigi: 1, peach: 0, bowser: 0, toad: 3, mario: 0 })).toEqual(['toad']);
+    expect(leaders({ luigi: 2, peach: 2, bowser: 0, toad: 0, mario: 0 })).toEqual(['luigi', 'peach']);
+    expect(leaders({ luigi: 0, peach: 0, bowser: 0, toad: 0, mario: 0 })).toEqual([]);
   });
 });

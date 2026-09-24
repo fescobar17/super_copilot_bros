@@ -37,7 +37,7 @@ export const aseguradoras: Sector = {
   firstChallenge: {
     luigi: '¿Qué cláusulas de exclusión se repiten en nuestras pólizas?',
     peach: 'Redacta la respuesta a este reclamo en tono empático',
-    yoshi: 'Analiza la siniestralidad del último trimestre en Excel',
+    bowser: 'Analiza la siniestralidad del último trimestre en Excel',
     toad: 'Crea un agente que clasifique los correos de siniestros',
     mario: 'Piloto de Copilot en el área de siniestros',
   },

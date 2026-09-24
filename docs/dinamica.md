@@ -26,7 +26,7 @@ Evento: Kruger Tech + Microsoft · 29 de octubre · Edificio K+ (UIO) · 18h00�
 |---|---|---|---|---|
 | A | **ENCUENTRA** | **Luigi** | Investigador: odia perder tiempo buscando lo que ya existe. | "Tu superpoder: que la información te encuentre a ti." |
 | B | **CREA** | **Peach** | Comunicadora: vive entre informes, correos y documentos. | "Tu superpoder: pasar de la hoja en blanco al borrador listo en segundos." |
-| C | **ANALIZA** | **Yoshi** | Estratega: quiere entender qué dicen los datos antes que nadie. | "Tu superpoder: ver el patrón antes de que llegue el Excel." |
+| C | **ANALIZA** | **Bowser** | Estratega: quiere entender qué dicen los datos antes que nadie. | "Tu superpoder: ver el patrón antes de que llegue el Excel." |
 | D | **AUTOMATIZA** | **Toad** | Operativo veloz: si algo se repite, quiere que se haga solo. | "Tu superpoder: que lo repetitivo corra en piloto automático." |
 | Empate | **ACELERA** | **Mario** | Todoterreno: combina todo, ve el impacto completo. | "Tu superpoder: acelerar a todo el equipo, no solo a ti." |
 
@@ -73,7 +73,7 @@ Evento: Kruger Tech + Microsoft · 29 de octubre · Edificio K+ (UIO) · 18h00�
 
 > 🪙 **Aha:** Estudios de adopción de Copilot muestran que lo primero que recupera el personal no es tiempo "de pantalla", sino tiempo **con las personas**. La IA no reemplaza al jugador: le devuelve tiempo de juego.
 
-*Primer reto por personaje (tarjeta final):* Luigi → "Pídele a Copilot: resume todo lo que tenemos sobre [protocolo X]". Peach → "Redacta el comunicado de cambio de turno en 30 segundos". Yoshi → "Sube el Excel de ocupación y pregunta: ¿qué patrón ves?". Toad → "Crea un agente que responda las preguntas frecuentes del personal". Mario → "Lleva un piloto de Copilot a un área completa".
+*Primer reto por personaje (tarjeta final):* Luigi → "Pídele a Copilot: resume todo lo que tenemos sobre [protocolo X]". Peach → "Redacta el comunicado de cambio de turno en 30 segundos". Bowser → "Sube el Excel de ocupación y pregunta: ¿qué patrón ves?". Toad → "Crea un agente que responda las preguntas frecuentes del personal". Mario → "Lleva un piloto de Copilot a un área completa".
 
 ---
 
@@ -112,7 +112,7 @@ Evento: Kruger Tech + Microsoft · 29 de octubre · Edificio K+ (UIO) · 18h00�
 
 > 🪙 **Aha:** Premera Blue Cross (EE. UU.) usa agentes de Copilot Studio para armar anexos de contratos que antes tomaban horas de trabajo manual. El dato contraintuitivo: el mayor ahorro no está en el siniestro, está en el **papeleo alrededor** del siniestro.
 
-*Primer reto:* Luigi → "¿Qué cláusulas de exclusión se repiten en nuestras pólizas?". Peach → "Redacta la respuesta a este reclamo en tono empático". Yoshi → "Analiza la siniestralidad del último trimestre en Excel". Toad → "Crea un agente que clasifique los correos de siniestros". Mario → "Piloto de Copilot en el área de siniestros".
+*Primer reto:* Luigi → "¿Qué cláusulas de exclusión se repiten en nuestras pólizas?". Peach → "Redacta la respuesta a este reclamo en tono empático". Bowser → "Analiza la siniestralidad del último trimestre en Excel". Toad → "Crea un agente que clasifique los correos de siniestros". Mario → "Piloto de Copilot en el área de siniestros".
 
 ---
 
@@ -151,7 +151,7 @@ Evento: Kruger Tech + Microsoft · 29 de octubre · Edificio K+ (UIO) · 18h00�
 
 > 🪙 **Aha:** Mayo Clinic Laboratories plantea que el valor de la IA en laboratorio no es solo analítico, sino **operativo**: ruteo de trabajo, priorización y reducción de tareas administrativas. Crecer sin contratar al mismo ritmo.
 
-*Primer reto:* Luigi → "¿Cuál es la versión vigente del POE de [prueba]?". Peach → "Redacta la guía de preparación del paciente para 5 exámenes". Yoshi → "Analiza el QC del mes en Excel". Toad → "Agente que responda consultas de estado de resultados". Mario → "Piloto en recepción y atención al médico".
+*Primer reto:* Luigi → "¿Cuál es la versión vigente del POE de [prueba]?". Peach → "Redacta la guía de preparación del paciente para 5 exámenes". Bowser → "Analiza el QC del mes en Excel". Toad → "Agente que responda consultas de estado de resultados". Mario → "Piloto en recepción y atención al médico".
 
 ---
 
@@ -190,7 +190,7 @@ Evento: Kruger Tech + Microsoft · 29 de octubre · Edificio K+ (UIO) · 18h00�
 
 > 🪙 **Aha:** Un centro médico pequeño tiene la misma ventaja que un gran hospital: Copilot funciona sobre Word, Excel, Outlook y Teams, las herramientas que **ya usan**. No hace falta un proyecto enorme para empezar.
 
-*Primer reto:* Luigi → "¿Qué dice nuestro protocolo de [procedimiento]?". Peach → "Crea el manual de bienvenida del nuevo médico". Yoshi → "Analiza el ausentismo por día en Excel". Toad → "Agente de preguntas frecuentes para pacientes". Mario → "Piloto en recepción + gerencia".
+*Primer reto:* Luigi → "¿Qué dice nuestro protocolo de [procedimiento]?". Peach → "Crea el manual de bienvenida del nuevo médico". Bowser → "Analiza el ausentismo por día en Excel". Toad → "Agente de preguntas frecuentes para pacientes". Mario → "Piloto en recepción + gerencia".
 
 ---
 
@@ -229,7 +229,7 @@ Evento: Kruger Tech + Microsoft · 29 de octubre · Edificio K+ (UIO) · 18h00�
 
 > 🪙 **Aha:** La IA no hace a todos los brokers iguales: amplifica lo que ya haces bien. Si tu valor es asesorar, Copilot te libera del papeleo para que asesores más clientes con la misma calidad.
 
-*Primer reto:* Luigi → "Compara estas 2 pólizas y dame las diferencias". Peach → "Redacta la propuesta de renovación para [cliente]". Yoshi → "Analiza mi cartera: ¿quién tiene más riesgo de no renovar?". Toad → "Automatiza el recordatorio de vencimientos". Mario → "Piloto de Copilot para todo el equipo comercial".
+*Primer reto:* Luigi → "Compara estas 2 pólizas y dame las diferencias". Peach → "Redacta la propuesta de renovación para [cliente]". Bowser → "Analiza mi cartera: ¿quién tiene más riesgo de no renovar?". Toad → "Automatiza el recordatorio de vencimientos". Mario → "Piloto de Copilot para todo el equipo comercial".
 
 ---
 

@@ -1,7 +1,7 @@
 import { z } from 'zod';
 
 export const LETTERS = ['A', 'B', 'C', 'D'] as const;
-export const CHARACTER_KEYS = ['luigi', 'peach', 'yoshi', 'toad', 'mario'] as const;
+export const CHARACTER_KEYS = ['luigi', 'peach', 'bowser', 'toad', 'mario'] as const;
 export const SECTOR_KEYS = [
   'hospitales',
   'aseguradoras',
@@ -57,7 +57,7 @@ export const SectorSchema = z.object({
   firstChallenge: z.object({
     luigi: z.string().min(1),
     peach: z.string().min(1),
-    yoshi: z.string().min(1),
+    bowser: z.string().min(1),
     toad: z.string().min(1),
     mario: z.string().min(1),
   }),
