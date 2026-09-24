@@ -10,13 +10,10 @@ import { UI } from '@/content/ui';
 import { LeadSchema } from '@/lib/payload';
 import { useGame, useHydrated } from '@/lib/store';
 
-type Field = 'name' | 'company' | 'role' | 'email' | 'phone';
+type Field = 'name' | 'email';
 const FIELDS: { key: Field; label: string; type: string; autoComplete: string; required: boolean }[] = [
   { key: 'name', label: UI.registro.name, type: 'text', autoComplete: 'name', required: true },
-  { key: 'company', label: UI.registro.company, type: 'text', autoComplete: 'organization', required: true },
-  { key: 'role', label: UI.registro.role, type: 'text', autoComplete: 'organization-title', required: true },
-  { key: 'email', label: UI.registro.email, type: 'email', autoComplete: 'email', required: false },
-  { key: 'phone', label: UI.registro.phone, type: 'tel', autoComplete: 'tel', required: false },
+  { key: 'email', label: UI.registro.email, type: 'email', autoComplete: 'email', required: true },
 ];
 
 export default function RegistroPage() {
@@ -31,10 +28,7 @@ export default function RegistroPage() {
 
   const [values, setValues] = useState<Record<Field, string>>({
     name: '',
-    company: '',
-    role: '',
     email: '',
-    phone: '',
   });
   const [consent, setConsent] = useState(false);
   const [errors, setErrors] = useState<Partial<Record<Field | 'consent', string>>>({});
@@ -60,7 +54,7 @@ export default function RegistroPage() {
         const k = issue.path[0] as Field | 'consent';
         if (next[k]) continue;
         next[k] =
-          k === 'consent' ? UI.registro.consentRequired : k === 'email' ? UI.registro.invalidEmail : UI.registro.required;
+          k === 'consent' ? UI.registro.consentRequired : k === 'email' && values.email.trim() ? UI.registro.invalidEmail : UI.registro.required;
       }
       setErrors(next);
       const first = Object.keys(next)[0];
@@ -89,7 +83,6 @@ export default function RegistroPage() {
                 id={`f-${f.key}`}
                 type={f.type}
                 autoComplete={f.autoComplete}
-                inputMode={f.type === 'tel' ? 'tel' : undefined}
                 required={f.required}
                 aria-invalid={Boolean(errors[f.key])}
                 aria-describedby={errors[f.key] ? `e-${f.key}` : undefined}

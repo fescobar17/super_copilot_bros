@@ -1,7 +1,7 @@
 'use client';
 
-/** Captura la tarjeta con html2canvas (import dinámico) y la comparte o descarga como PNG. */
-export async function exportCard(node: HTMLElement, fileName: string): Promise<'shared' | 'downloaded' | 'cancelled'> {
+/** Captura la tarjeta con html2canvas (import dinámico), la descarga como PNG y devuelve el archivo para compartirlo. */
+export async function exportCard(node: HTMLElement, fileName: string): Promise<File> {
   const { default: html2canvas } = await import('html2canvas');
   const canvas = await html2canvas(node, {
     scale: 2,
@@ -13,15 +13,6 @@ export async function exportCard(node: HTMLElement, fileName: string): Promise<'
   const blob = await new Promise<Blob | null>((resolve) => canvas.toBlob(resolve, 'image/png'));
   if (!blob) throw new Error('No se pudo generar la imagen');
 
-  const file = new File([blob], fileName, { type: 'image/png' });
-  if (typeof navigator.share === 'function' && navigator.canShare?.({ files: [file] })) {
-    try {
-      await navigator.share({ files: [file], title: 'Super Copilot Bros' });
-      return 'shared';
-    } catch (err) {
-      if (err instanceof DOMException && err.name === 'AbortError') return 'cancelled';
-    }
-  }
   const url = URL.createObjectURL(blob);
   const a = document.createElement('a');
   a.href = url;
@@ -30,5 +21,19 @@ export async function exportCard(node: HTMLElement, fileName: string): Promise<'
   a.click();
   a.remove();
   setTimeout(() => URL.revokeObjectURL(url), 2000);
-  return 'downloaded';
+  return new File([blob], fileName, { type: 'image/png' });
+}
+
+export function canShareFile(file: File): boolean {
+  return typeof navigator.share === 'function' && Boolean(navigator.canShare?.({ files: [file] }));
+}
+
+/** Abre la hoja nativa de compartir. Devuelve false si el navegador la bloquea (p. ej. sin gesto del usuario). */
+export async function shareCard(file: File): Promise<boolean> {
+  try {
+    await navigator.share({ files: [file], title: 'Super Copilot Bros' });
+    return true;
+  } catch (err) {
+    return err instanceof DOMException && err.name === 'AbortError';
+  }
 }

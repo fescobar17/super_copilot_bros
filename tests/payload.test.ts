@@ -7,10 +7,7 @@ import { makeStandCode } from '@/lib/standCode';
 
 const lead = LeadSchema.parse({
   name: 'Ana Pérez',
-  company: 'Seguros Andinos',
-  role: 'Gerente de Siniestros',
-  email: '',
-  phone: '',
+  email: 'ana@segurosandinos.com',
   consent: true,
 });
 

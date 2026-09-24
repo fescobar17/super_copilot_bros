@@ -42,7 +42,7 @@ function codeFor(
   answers: Letter[],
   result: Result,
 ): string {
-  const seed = `${lead?.name ?? ''}|${lead?.company ?? ''}|${sectorKey}|${round}|${answers.join('')}`;
+  const seed = `${lead?.name ?? ''}|${lead?.email ?? ''}|${sectorKey}|${round}|${answers.join('')}`;
   return makeStandCode(result.character, shortCode, seed);
 }
 

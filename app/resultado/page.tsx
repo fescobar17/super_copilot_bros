@@ -11,7 +11,7 @@ import Scenery, { Coin } from '@/components/Scenery';
 import Title from '@/components/Title';
 import { CHARACTERS, getSector } from '@/content';
 import { fill, UI } from '@/content/ui';
-import { exportCard } from '@/lib/cardExport';
+import { canShareFile, exportCard, shareCard } from '@/lib/cardExport';
 import { buildRow } from '@/lib/payload';
 import { renderBold } from '@/lib/richText';
 import { sfx } from '@/lib/sound';
@@ -27,6 +27,7 @@ export default function ResultadoPage() {
 
   const [showClear, setShowClear] = useState(true);
   const [exporting, setExporting] = useState(false);
+  const [cardFile, setCardFile] = useState<File | null>(null);
   const cardRef = useRef<HTMLDivElement>(null);
   const standRef = useRef<HTMLDivElement>(null);
   const sending = useRef(false);
@@ -69,7 +70,11 @@ export default function ResultadoPage() {
     if (!cardRef.current) return;
     setExporting(true);
     try {
-      await exportCard(cardRef.current, `super-copilot-bros-${c.key}.png`);
+      const file = await exportCard(cardRef.current, `super-copilot-bros-${c.key}.png`);
+      const shareable = canShareFile(file);
+      setCardFile(shareable ? file : null);
+      // Intenta abrir compartir enseguida; si el navegador lo bloquea, queda el botón "Compartir".
+      if (shareable) await shareCard(file);
     } finally {
       setExporting(false);
     }
@@ -138,7 +143,7 @@ export default function ResultadoPage() {
           </p>
           <p className="pixel mt-2 break-all text-[20px] leading-relaxed text-white">{g.standCode}</p>
           <p className="mt-2 text-sm font-bold text-white">
-            {g.lead.name} · {g.lead.company}
+            {g.lead.name}
           </p>
         </div>
 
@@ -150,12 +155,20 @@ export default function ResultadoPage() {
             sector={sector}
             counts={g.result.counts}
             playerName={g.lead.name}
-            company={g.lead.company}
             standCode={g.standCode}
           />
           <button type="button" onClick={onExport} disabled={exporting} className="btn-primary mt-4 w-full max-w-[320px]">
             {exporting ? UI.resultado.generating : UI.resultado.download}
           </button>
+          {cardFile ? (
+            <button
+              type="button"
+              onClick={() => void shareCard(cardFile)}
+              className="mt-3 min-h-[48px] w-full max-w-[320px] rounded-xl border-[3px] border-mario-ink bg-white font-extrabold text-mario-ink"
+            >
+              {UI.resultado.share}
+            </button>
+          ) : null}
           <SubmissionBadge status={g.submission} onRetry={() => void send()} />
         </div>
 

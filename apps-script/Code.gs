@@ -7,7 +7,7 @@
 
 var SHEET_NAME = 'Jugadas';
 var COLUMNS = [
-  'Timestamp', 'Ronda', 'Nombre', 'Empresa', 'Cargo', 'Email', 'Celular',
+  'Timestamp', 'Ronda', 'Nombre', 'Email',
   'Sector', 'Personaje', 'PowerUp',
   'Conteo_A', 'Conteo_B', 'Conteo_C', 'Conteo_D',
   'P1_Pregunta', 'P1_Respuesta', 'P2_Pregunta', 'P2_Respuesta',

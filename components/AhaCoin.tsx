@@ -6,7 +6,7 @@ import { renderBold, splitAha } from '@/lib/richText';
 import { Coin } from './Scenery';
 import Title from './Title';
 
-/** Pantalla de Moneda Aha: la moneda sube y gira, luego aparece el dato con la parte "en realidad Copilot…" resaltada. */
+/** Pantalla de KOIN: la moneda sube y gira, luego aparece el dato con la parte "en realidad Copilot…" resaltada. */
 export default function AhaCoin({ text, index }: { text: string; index: number }) {
   const reduce = useReducedMotion();
   const { setup, reveal } = splitAha(text);

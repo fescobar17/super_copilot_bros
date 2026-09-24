@@ -27,7 +27,7 @@ Sin `APPS_SCRIPT_URL` la app funciona igual: el guardado falla sin bloquear al j
 | `/` | Key visual + CTA "¡Jugar!" |
 | `/pista` | 5 mundos (sectores) |
 | `/nivel` | 4 preguntas con bloques "?", Moneda Aha y botón Atrás |
-| `/registro` | Nombre, empresa, cargo (obligatorios), email y celular (opcionales), consentimiento |
+| `/registro` | Nombre y correo (obligatorios), consentimiento |
 | `/resultado` | "Nivel superado" → personaje, primer reto, código de stand, tarjeta descargable, respuestas, "Jugar otra pista" |
 | `/tablero?key=BOARD_KEY` | Vista 16:9 para proyector, refresca cada 10 s |
 | `POST /api/submit` | Valida con Zod y reenvía a Apps Script (1 reintento) |
@@ -74,7 +74,7 @@ Si editas `Code.gs`, vuelve a implementar como **nueva versión**; si no, la URL
 |---|---|
 | Timestamp | Hora de Ecuador (la agrega el servidor) |
 | Ronda | 1 para la primera pista, 2 para la segunda… |
-| Nombre, Empresa, Cargo, Email, Celular | Lead |
+| Nombre, Email | Lead |
 | Sector | Nombre visible del sector |
 | Personaje, PowerUp | Resultado |
 | Conteo_A … Conteo_D | Respuestas por letra (barras de la tarjeta) |

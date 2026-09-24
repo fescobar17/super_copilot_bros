@@ -5,10 +5,7 @@ import type { Result } from './scoring';
 
 export const LeadSchema = z.object({
   name: z.string().trim().min(2).max(120),
-  company: z.string().trim().min(1).max(120),
-  role: z.string().trim().min(1).max(120),
-  email: z.union([z.literal(''), z.string().trim().email().max(160)]),
-  phone: z.string().trim().max(30),
+  email: z.string().trim().email().max(160),
   consent: z.literal(true),
 });
 export type Lead = z.infer<typeof LeadSchema>;
@@ -19,10 +16,7 @@ const answerCell = z.string().max(400);
 export const RowSchema = z.object({
   Ronda: z.number().int().min(1).max(10),
   Nombre: z.string().min(1).max(120),
-  Empresa: z.string().min(1).max(120),
-  Cargo: z.string().min(1).max(120),
-  Email: z.string().max(160),
-  Celular: z.string().max(30),
+  Email: z.string().min(1).max(160),
   Sector: z.string().min(1).max(60),
   Personaje: z.string().min(1).max(20),
   PowerUp: z.string().min(1).max(20),
@@ -68,10 +62,7 @@ export function buildRow(args: {
   return {
     Ronda: round,
     Nombre: lead.name.trim(),
-    Empresa: lead.company.trim(),
-    Cargo: lead.role.trim(),
     Email: lead.email.trim(),
-    Celular: lead.phone.trim(),
     Sector: sector.name,
     Personaje: CHARACTERS[result.character].name,
     PowerUp: result.powerUp,

@@ -18,7 +18,7 @@ export default function Hud({ coins, label }: { coins?: number; label?: string }
         {typeof coins === 'number' ? (
           <div
             className="flex items-center gap-2 rounded-full bg-black/25 px-3 py-1.5"
-            aria-label={`Monedas Aha: ${coins}`}
+            aria-label={`KOINS: ${coins}`}
           >
             <Coin size={20} />
             <span className="pixel text-xs text-white" aria-hidden>

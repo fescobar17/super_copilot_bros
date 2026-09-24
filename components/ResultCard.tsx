@@ -37,12 +37,11 @@ interface Props {
   sector: Sector;
   counts: LetterCounts;
   playerName: string;
-  company: string;
   standCode: string;
 }
 
 const ResultCard = forwardRef<HTMLDivElement, Props>(function ResultCard(
-  { character, sector, counts, playerName, company, standCode },
+  { character, sector, counts, playerName, standCode },
   ref,
 ) {
   const c = CHARACTERS[character];
@@ -191,7 +190,6 @@ const ResultCard = forwardRef<HTMLDivElement, Props>(function ResultCard(
       <div style={{ padding: '12px 16px 0', display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', gap: 8 }}>
         <div style={{ minWidth: 0 }}>
           <div style={{ fontSize: 15, fontWeight: 900, lineHeight: 1.15, textShadow: `0 1px 0 ${INK}` }}>{playerName}</div>
-          <div style={{ fontSize: 12, fontWeight: 700, opacity: 0.95 }}>{company}</div>
         </div>
         <div style={{ fontFamily: PIXEL, fontSize: 8, textAlign: 'right', lineHeight: 1.6 }}>
           {standCode}
